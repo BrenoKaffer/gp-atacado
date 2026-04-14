@@ -68,7 +68,7 @@ export default function ServicesPage({ currentYear, whatsappCtaHref }: Props) {
               Início
             </a>
             <a className="nav-link" href="/produtos">
-              Produtos
+              Catálogo
             </a>
             <a className="nav-link" href="/sobre-operacao">
               Sobre a operação

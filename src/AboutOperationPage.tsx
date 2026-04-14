@@ -65,7 +65,7 @@ export default function AboutOperationPage({
               Início
             </a>
             <a className="nav-link" href="/produtos">
-              Produtos
+              Catálogo
             </a>
             <a className="nav-link" href="/servicos">
               Serviços

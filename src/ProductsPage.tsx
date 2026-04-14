@@ -193,7 +193,7 @@ export default function ProductsPage({ currentYear, whatsappCtaHref }: Props) {
     return `${base}?text=${encodeURIComponent(message)}`
   }
 
-  const whatsappQuoteHref = useMemo(() => buildWhatsappQuoteHref(deliveryAddress), [deliveryAddress, selectedItems, whatsappCtaHref])
+  const whatsappQuoteHref = buildWhatsappQuoteHref(deliveryAddress)
 
   const persistCart = (next: Record<number, number>) => {
     setCart(next)
@@ -321,8 +321,8 @@ export default function ProductsPage({ currentYear, whatsappCtaHref }: Props) {
           </a>
           <div className="nav-links" role="navigation">
             <a className="nav-link" href="/">Início</a>
+            <a className="nav-link" href="/produtos">Catálogo</a>
             <a className="nav-link" href="/#about">Sobre</a>
-            <a className="nav-link" href="/#products">Produtos</a>
             <a className="nav-link" href="/#contact">Contato</a>
           </div>
           <div className="nav-cta">
