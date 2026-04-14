@@ -1,0 +1,44 @@
+.privacy-page {
+  min-height: 100svh;
+}
+
+.privacy-main {
+  padding-bottom: 20px;
+}
+
+.privacy-hero-inner {
+  max-width: 880px;
+}
+
+.privacy-content {
+  display: grid;
+  gap: 14px;
+}
+
+.privacy-block {
+  display: grid;
+  gap: 8px;
+}
+
+.privacy-list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+  color: rgba(8, 6, 13, 0.75);
+}
+
+.privacy-email {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.privacy-email a {
+  color: rgba(8, 6, 13, 0.88);
+  text-decoration: none;
+}
+
+.privacy-email a:hover {
+  text-decoration: underline;
+}

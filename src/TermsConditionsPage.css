@@ -1,0 +1,44 @@
+.terms-page {
+  min-height: 100svh;
+}
+
+.terms-main {
+  padding-bottom: 20px;
+}
+
+.terms-hero-inner {
+  max-width: 880px;
+}
+
+.terms-content {
+  display: grid;
+  gap: 14px;
+}
+
+.terms-block {
+  display: grid;
+  gap: 8px;
+}
+
+.terms-list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+  color: rgba(8, 6, 13, 0.75);
+}
+
+.terms-email {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.terms-email a {
+  color: rgba(8, 6, 13, 0.88);
+  text-decoration: none;
+}
+
+.terms-email a:hover {
+  text-decoration: underline;
+}

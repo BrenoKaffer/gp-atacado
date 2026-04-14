@@ -1,0 +1,95 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="170" y1="130" x2="1440" y2="910" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F4FFF7"/>
+      <stop offset="0.52" stop-color="#E8FAEE"/>
+      <stop offset="1" stop-color="#DDF5E5"/>
+    </linearGradient>
+    <radialGradient id="greenGlowA" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(760 470) rotate(90) scale(520 760)">
+      <stop offset="0" stop-color="#22C55E" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#22C55E" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="greenGlowB" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1260 220) rotate(90) scale(320 420)">
+      <stop offset="0" stop-color="#16A34A" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#16A34A" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="phoneFrame" x1="640" y1="170" x2="975" y2="830" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#ECFDF3" stop-opacity="0.8"/>
+    </linearGradient>
+    <linearGradient id="phoneScreen" x1="680" y1="235" x2="930" y2="760" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22C55E"/>
+      <stop offset="1" stop-color="#15803D"/>
+    </linearGradient>
+    <linearGradient id="glassCard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.72"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.26"/>
+    </linearGradient>
+    <filter id="blurBottle" x="-80" y="-80" width="1760" height="1160" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="150%" filterUnits="objectBoundingBox">
+      <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#0F172A" flood-opacity="0.18"/>
+    </filter>
+    <filter id="floatShadow" x="-40%" y="-40%" width="180%" height="190%" filterUnits="objectBoundingBox">
+      <feDropShadow dx="0" dy="24" stdDeviation="20" flood-color="#0F172A" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bgGradient)"/>
+  <rect width="1600" height="1000" fill="url(#greenGlowA)"/>
+  <rect width="1600" height="1000" fill="url(#greenGlowB)"/>
+
+  <!-- Blurred beverage silhouettes -->
+  <g filter="url(#blurBottle)" opacity="0.78">
+    <rect x="160" y="355" width="120" height="420" rx="34" fill="#A7F3D0"/>
+    <rect x="188" y="312" width="64" height="68" rx="18" fill="#A7F3D0"/>
+    <rect x="302" y="420" width="106" height="355" rx="30" fill="#86EFAC"/>
+    <rect x="328" y="386" width="54" height="56" rx="16" fill="#86EFAC"/>
+
+    <rect x="1210" y="330" width="132" height="450" rx="38" fill="#99F6E4"/>
+    <rect x="1244" y="284" width="64" height="72" rx="18" fill="#99F6E4"/>
+    <rect x="1060" y="445" width="112" height="335" rx="30" fill="#6EE7B7"/>
+    <rect x="1088" y="406" width="56" height="60" rx="16" fill="#6EE7B7"/>
+  </g>
+
+  <!-- Depth cards behind phone -->
+  <rect x="560" y="190" width="480" height="640" rx="54" fill="url(#glassCard)" stroke="#FFFFFF" stroke-opacity="0.45"/>
+  <rect x="585" y="218" width="430" height="584" rx="42" fill="#FFFFFF" fill-opacity="0.2"/>
+
+  <!-- Smartphone -->
+  <g filter="url(#softShadow)">
+    <rect x="625" y="155" width="350" height="700" rx="62" fill="url(#phoneFrame)" stroke="#FFFFFF" stroke-opacity="0.66"/>
+    <rect x="652" y="205" width="296" height="610" rx="44" fill="url(#phoneScreen)"/>
+    <rect x="742" y="178" width="116" height="20" rx="10" fill="#0F172A" fill-opacity="0.16"/>
+
+    <!-- UI blocks -->
+    <rect x="690" y="266" width="220" height="112" rx="22" fill="#FFFFFF" fill-opacity="0.2" stroke="#FFFFFF" stroke-opacity="0.3"/>
+    <rect x="690" y="400" width="104" height="164" rx="20" fill="#FFFFFF" fill-opacity="0.2"/>
+    <rect x="806" y="400" width="104" height="164" rx="20" fill="#FFFFFF" fill-opacity="0.2"/>
+    <rect x="690" y="586" width="220" height="78" rx="18" fill="#FFFFFF" fill-opacity="0.2"/>
+    <rect x="690" y="688" width="220" height="76" rx="18" fill="#052E16" fill-opacity="0.24" stroke="#BBF7D0" stroke-opacity="0.35"/>
+
+    <!-- Logo circle -->
+    <circle cx="800" cy="322" r="34" fill="#DCFCE7"/>
+    <path d="M784 324C804 305 822 314 819 336C812 351 790 352 781 338C778 333 779 327 784 324Z" fill="#16A34A"/>
+    <rect x="788" y="334" width="26" height="5" rx="2.5" fill="#15803D" fill-opacity="0.9"/>
+  </g>
+
+  <!-- Floating beverage element 1 -->
+  <g filter="url(#floatShadow)">
+    <rect x="430" y="420" width="146" height="228" rx="42" fill="url(#glassCard)" stroke="#FFFFFF" stroke-opacity="0.6"/>
+    <rect x="468" y="387" width="70" height="50" rx="20" fill="#FFFFFF" fill-opacity="0.46"/>
+    <rect x="458" y="466" width="90" height="132" rx="26" fill="#22C55E" fill-opacity="0.28"/>
+  </g>
+
+  <!-- Floating beverage element 2 -->
+  <g filter="url(#floatShadow)">
+    <rect x="1028" y="370" width="156" height="250" rx="44" fill="url(#glassCard)" stroke="#FFFFFF" stroke-opacity="0.6"/>
+    <rect x="1070" y="336" width="74" height="54" rx="20" fill="#FFFFFF" fill-opacity="0.46"/>
+    <rect x="1058" y="426" width="98" height="152" rx="28" fill="#34D399" fill-opacity="0.26"/>
+  </g>
+
+  <!-- Subtle foreground haze -->
+  <rect x="0" y="760" width="1600" height="240" fill="#FFFFFF" fill-opacity="0.28"/>
+</svg>

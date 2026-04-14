@@ -1,0 +1,95 @@
+.about-operation-page {
+  min-height: 100svh;
+}
+
+.about-operation-main {
+  padding-bottom: 20px;
+}
+
+.section--tight {
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+
+.about-hero-inner {
+  max-width: 800px;
+}
+
+.about-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.about-grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.about-grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.about-grid--four {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.about-stat-card {
+  text-align: center;
+}
+
+.about-stat-card strong {
+  font-size: 18px;
+  color: rgba(8, 6, 13, 0.88);
+}
+
+.about-list {
+  margin: 14px 0 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+  color: rgba(8, 6, 13, 0.72);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.about-step-card {
+  text-align: center;
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+}
+
+.about-step-index {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 760;
+  color: rgba(8, 6, 13, 0.82);
+  background: rgba(88, 196, 16, 0.12);
+  border: 1px solid rgba(88, 196, 16, 0.22);
+}
+
+.about-copy-block {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.about-final-cta {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto;
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+}
+
+@media (max-width: 980px) {
+  .about-grid--two,
+  .about-grid--three,
+  .about-grid--four {
+    grid-template-columns: 1fr;
+  }
+}
