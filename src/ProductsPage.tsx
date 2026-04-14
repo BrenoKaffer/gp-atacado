@@ -321,7 +321,6 @@ export default function ProductsPage({ currentYear, whatsappCtaHref }: Props) {
           </a>
           <div className="nav-links" role="navigation">
             <a className="nav-link" href="/">Início</a>
-            <a className="nav-link" href="/produtos">Catálogo</a>
             <a className="nav-link" href="/#about">Sobre</a>
             <a className="nav-link" href="/#contact">Contato</a>
           </div>

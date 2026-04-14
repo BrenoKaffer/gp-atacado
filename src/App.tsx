@@ -119,6 +119,7 @@ function App() {
 
   const navItems = useMemo(
     () => [
+      { href: '/produtos', label: 'Catálogo' },
       { id: 'about', label: 'Sobre' },
       { id: 'products', label: 'Produtos' },
       { id: 'benefits', label: 'Diferenciais' },
@@ -553,10 +554,10 @@ function App() {
           >
             {navItems.map((item) => (
               <a
-                key={item.id}
+                key={item.id ?? item.href}
                 className="nav-link"
-                href={`#${item.id}`}
-                onClick={handleNavClick(item.id)}
+                href={item.href ?? `#${item.id}`}
+                onClick={item.id ? handleNavClick(item.id) : () => setIsMobileNavOpen(false)}
               >
                 {item.label}
               </a>
