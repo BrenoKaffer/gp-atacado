@@ -96,6 +96,7 @@ function App() {
     Record<string, number>
   >({})
   const [isSummaryOpen, setIsSummaryOpen] = useState(false)
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
 
   const waLink = useMemo(() => {
     const base = whatsappNumber.length > 0 ? `https://wa.me/${whatsappNumber}` : ''
@@ -131,6 +132,7 @@ function App() {
 
   const handleNavClick = (sectionId: string) => (e: React.MouseEvent) => {
     e.preventDefault()
+    setIsMobileNavOpen(false)
     document.getElementById(sectionId)?.scrollIntoView({
       behavior: 'smooth',
       block: 'start',
@@ -177,6 +179,22 @@ function App() {
       setFabTextIndex((prev) => (prev + 1) % labels.length)
     }, 2600)
     return () => window.clearInterval(timer)
+  }, [])
+
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth > 980) setIsMobileNavOpen(false)
+    }
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setIsMobileNavOpen(false)
+    }
+
+    window.addEventListener('resize', onResize)
+    window.addEventListener('keydown', onKeyDown)
+    return () => {
+      window.removeEventListener('resize', onResize)
+      window.removeEventListener('keydown', onKeyDown)
+    }
   }, [])
 
   const validateStep = (next: typeof form, step: 1 | 2) => {
@@ -514,7 +532,25 @@ function App() {
             />
           </a>
 
-          <div className="nav-links" role="navigation" aria-label="Seções">
+          <button
+            className={`nav-toggle ${isMobileNavOpen ? 'is-open' : ''}`}
+            type="button"
+            aria-expanded={isMobileNavOpen}
+            aria-controls="mobile-nav-links"
+            aria-label="Abrir menu de navegação"
+            onClick={() => setIsMobileNavOpen((prev) => !prev)}
+          >
+            <span className="nav-toggle-bar" />
+            <span className="nav-toggle-bar" />
+            <span className="nav-toggle-bar" />
+          </button>
+
+          <div
+            id="mobile-nav-links"
+            className={`nav-links ${isMobileNavOpen ? 'is-open' : ''}`}
+            role="navigation"
+            aria-label="Seções"
+          >
             {navItems.map((item) => (
               <a
                 key={item.id}
@@ -525,6 +561,15 @@ function App() {
                 {item.label}
               </a>
             ))}
+            <a
+              className="nav-link nav-link--cta-mobile"
+              href={whatsappCtaHref}
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => setIsMobileNavOpen(false)}
+            >
+              Pedir pelo WhatsApp
+            </a>
           </div>
 
           <div className="nav-cta">
